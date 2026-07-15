@@ -3,6 +3,10 @@
 .claude/state/
 CLAUDE.local.md
 
+# Agency-specific working notes that must never be committed — see
+# controlled-information.md's "This rule must stay generic" section.
+local/
+
 # OS files
 .DS_Store
 Thumbs.db

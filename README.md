@@ -24,7 +24,7 @@ node scripts/build-chat.mjs --check  # CI-style check: fails if chat/ is stale
 
 ## Hard constraints this repo follows
 
-- **Zero agency-specific content.** No agency names beyond "your agency," no program names, no internal system names, no personnel references. Anywhere agency-specific material would go, you'll find a marked placeholder: `<<FILL: description>>`.
+- **Zero agency-specific content.** No agency names beyond "your agency," no program names, no internal system names, no personnel references. Anywhere agency-specific material would go, you'll find a marked placeholder: `<<FILL: description>>`. If you need to jot down the real value locally, it goes in `local/` (gitignored, never committed) — never in a tracked file.
 - **Public-domain regulatory content is in scope and encouraged** — OMB Circular A-4 concepts, standard VSL sourcing conventions, discount-rate guidance, RIA structure. None of that is agency-specific; it's the shared public methodology every federal economist already works from.
 - **Less is more.** Files stay short and single-purpose, following upstream's own advice.
 
@@ -52,6 +52,7 @@ templates/  deliverable templates (specs, matrices, etc.)
 docs/       adaptation notes and onboarding
 scripts/
   build-chat.mjs   generates chat/ from .claude/ — see --check above
+local/      gitignored — your agency-specific working notes; never committed
 ```
 
 ## License and attribution

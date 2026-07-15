@@ -20,6 +20,7 @@ Treat all of the following as things that do not get typed, pasted, or committed
 - **Embargoed statistics or unreleased figures** — anything under a release lockup, before the public release date and time.
 - **Personnel information** — performance ratings, disciplinary actions, hiring deliberations, or anything that identifies a specific individual's role in a decision.
 - **Internal system names, network details, or credentials** of any kind.
+- **Document metadata** — tracked-changes and comment authorship, file properties (author, org, last-saved-by), and revision history carried in a Word document or anything derived from it. Pasting "just the text" of a document doesn't strip this; check what the paste actually carried before treating it as clean.
 
 When a task needs to reference one of these, use a placeholder (below) instead of the real value.
 
@@ -40,7 +41,7 @@ Default to withholding, not disclosing. If it's unclear whether something is SBU
 
 ## This rule must stay generic
 
-This file describes *how* to handle controlled information — it must never *contain* any. No real agency names, no real figures, no real program details, no illustrative "for example, at [agency] we..." anecdotes — only the categories and the discipline above, written so they hold for any federal economist at any agency. If a future edit to this file would only make sense with a specific agency's real example plugged in, that example belongs in a local, gitignored note — never in this rule.
+This file describes *how* to handle controlled information — it must never *contain* any. No real agency names, no real figures, no real program details, no illustrative "for example, at [agency] we..." anecdotes — only the categories and the discipline above, written so they hold for any federal economist at any agency. If a future edit to this file would only make sense with a specific agency's real example plugged in, that example belongs in `local/` — a gitignored directory for agency-specific working notes — never in this rule.
 
 ## Cross-references
 

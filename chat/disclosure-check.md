@@ -15,7 +15,7 @@ A pre-share audit for the everyday sensitivity of federal regulatory and program
 
 1. **Agency-specific identifiers** — names beyond "your agency," program names, internal system or database names, office/division names, docket or case numbers not yet public.
 2. **Unreleased figures** — dollar amounts, dates, headcounts, or statistics that are not yet cleared for public release, especially anything under an embargo or release lockup.
-3. **Personnel names** — anyone identified by name, title-plus-context that identifies an individual, or personnel-action references.
+3. **Personnel names** — anyone identified by name, title-plus-context that identifies an individual, personnel-action references, or comment/tracked-change attribution carried over from a Word document or other document-derived text (a name in a margin comment or a "Last edited by" field counts just as much as a name in prose).
 4. **Internal system references** — file paths, network shares, internal tool names, credentials, or anything that describes agency IT infrastructure.
 
 ## Workflow
