@@ -1,0 +1,19 @@
+# Claude Code local files (not shared across machines)
+.claude/settings.local.json
+.claude/state/
+CLAUDE.local.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (build-chat.mjs has no dependencies today, but keep this ready)
+node_modules/
