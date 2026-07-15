@@ -4,8 +4,6 @@
 
 A federal-economist adaptation of [pedrohcgs/claude-code-my-workflow](https://github.com/pedrohcgs/claude-code-my-workflow) (MIT). The upstream project is a full academic-research workflow for Claude Code — slides, papers, replication packages, and more. This repo takes **the knowledge layer of that workflow, adapted for federal regulatory and program/policy analysis, dual-built for Claude Code and enterprise chat.**
 
-> **Status:** this repo is being built in gated steps (scaffold → controlled-information rule → working rules/skills/templates → onboarding). Some files linked below land in a later step; each step's report says what's done.
-
 It does not port the academic-deliverable machinery (LaTeX/Beamer slides, Quarto, TikZ diagrams, journal-referee simulation). What it keeps is the part that generalizes: rules that state a standing policy, skills that describe a repeatable procedure, and templates that structure a deliverable. See [`docs/adaptation-guide.md`](docs/adaptation-guide.md) for the full account of what was and wasn't ported, and why.
 
 ## The two-surface concept
@@ -39,6 +37,18 @@ node scripts/build-chat.mjs --check  # CI-style check: fails if chat/ is stale
 3. **Using Claude Code:** start `claude` in this directory and ask it to review a document against a rule, or invoke a skill (e.g. run the disclosure check or the program-office response mapping on a real draft).
 4. **No Claude Code / airgapped chat only:** open the matching file under `chat/`, paste the whole thing as your first message, then paste your document. Each `chat/` file starts with a one-line `ROLE:` header telling the model what job it's doing.
 5. **First real task:** point it at a draft RIA section or a program-office comment letter you're already working on. See [`docs/adaptation-guide.md`](docs/adaptation-guide.md) for how the pieces fit together.
+
+## First hour
+
+The five-step quick start gets you to a first output; this is the fuller version for the rest of the hour.
+
+- **0–5 min: fork, clone.** As above.
+- **5–15 min: fill in what today's task actually needs.** Open [`.claude/rules/ria-knowledge-base.md`](.claude/rules/ria-knowledge-base.md) and fill only the `<<FILL>>` rows your first task touches (e.g., the discount-rate vintage and VSL sourcing if you're drafting benefits/costs). You don't need every row filled on day one — leave the rest for whoever hits it next.
+- **15–30 min: run a real skill on a real (low-stakes) document.** Pick something you're already working on — a comment letter you owe a response to, a draft RIA section — and run [`respond-to-program-office`](.claude/skills/respond-to-program-office/SKILL.md) or reference `ria-knowledge-base.md` while drafting. Confirm the output looks like the deliverable you'd normally produce by hand.
+- **30–45 min: run `disclosure-check` before anything leaves your machine.** Before pasting a result into an email, an external chat tool, or a shared drive, run [`disclosure-check`](.claude/skills/disclosure-check/SKILL.md) on it. Treat any CRITICAL as a stop sign; confirm each WARNING yourself — see [`docs/adaptation-guide.md`](docs/adaptation-guide.md) for why this applies to the repo's own files too, not just your work product.
+- **45–60 min: read the adaptation guide.** It covers the dividing line this repo uses to decide what's a rule vs. a skill, what was deliberately left out of the upstream port and why, and how to add your own rule or skill later without breaking the `chat/` build.
+
+If you're chat-only (airgapped, no filesystem), the same hour works from `chat/` instead of `.claude/` — paste the whole matching file as your first message, then paste your own document.
 
 ## Repository layout
 
