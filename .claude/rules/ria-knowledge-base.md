@@ -37,12 +37,15 @@ A reference registry for regulatory impact analysis (RIA) work, filled in with t
 
 ## Discounting
 
-Public guidance on discount rates has evolved and legacy and current approaches can both appear in agency practice:
+Public guidance on discount rates has changed twice in three years, and which vintage governs a given analysis depends on the analysis's submission date and which OMB circular it falls under — that instability is itself the argument for confirming rather than assuming. Timeline:
 
-- **Legacy convention (2003 Circular A-4):** present benefits and costs at both 3% (reflecting the rate at which society is willing to trade off consumption across time) and 7% (reflecting the pre-tax return on private capital), reported side by side.
-- **Current convention (2023 Circular A-4 revision):** centers on a discount rate tied to the real rate of return on long-term government debt (materially below the legacy 3%/7% pair), with sensitivity analysis at alternative rates.
+- **2003 Circular A-4 (original):** present benefits and costs at both 3% (reflecting the rate at which society is willing to trade off consumption across time) and 7% (reflecting the pre-tax return on private capital), reported side by side.
+- **2023 Circular A-4 revision:** replaced the 3%/7% pair with a rate tied to long-term Treasury/TIPS real returns (materially lower), with sensitivity analysis at alternative rates.
+- **January 2025 (OMB Memo M-25-15, under Executive Order 14192):** rescinded the 2023 Circular A-4 revision and reinstated the 2003 version — the 3%/7% approach is the guidance currently in force for RIAs.
 
-Because this guidance changes and reasonable people disagree about which vintage applies to a given rule, confirm the rate your agency is currently instructed to use rather than assuming either convention by default.
+This history is specific to Circular A-4 (regulatory impact analysis). Circular A-94 (benefit-cost analysis for federal programs, not regulations) was revised in 2023 and was **not** rescinded by M-25-15 — so the applicable discount-rate vintage can differ between an RIA and a program BCA done at the same agency at the same time.
+
+Confirm the vintage your agency is currently instructed to use for the specific analysis type (RIA vs. program BCA) rather than assuming either convention by default.
 
 **Your agency's currently-applied rate(s) and source:** `<<FILL>>`
 

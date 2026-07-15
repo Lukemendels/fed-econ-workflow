@@ -34,7 +34,7 @@
 
 | Aspect | Status | Notes |
 |--------|--------|-------|
-| [Ambiguous aspect. Example: "Which discount rate vintage applies (2003 vs. 2023 Circular A-4)."] | CLEAR / ASSUMED / BLOCKED | [How it was resolved or why it's assumed. Example: "ASSUMED current (2023) guidance absent instruction otherwise; flagged for the reviewing economist to confirm."] |
+| [Ambiguous aspect. Example: "Which discount-rate vintage applies (Circular A-4 has changed twice since 2003)."] | CLEAR / ASSUMED / BLOCKED | [How it was resolved or why it's assumed. Example: "ASSUMED the vintage named in the agency's most recent instruction; flagged for the reviewing economist to confirm."] |
 | [Another aspect. Example: "Whether the program office's numbering convention or the standard RIA section order governs this draft."] | CLEAR / ASSUMED / BLOCKED | [Explanation] |
 
 **Status Definitions:**

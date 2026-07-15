@@ -51,7 +51,7 @@ If neither a revision nor a deliberate deferred/disagreement rationale can be fo
 
 | ID | Priority | Summary | Classification | Response | Location |
 |---|---|---|---|---|---|
-| C1 | Must fix | [one-line summary] | Addressed | [2-4 sentence response] | Section 3, ¶2 |
+| C1 | Must fix | [one-line summary] | Addressed | [3-6 sentence response] | Section 3, ¶2 |
 | C2 | Suggestion | [one-line summary] | Deferred | [response with rationale] | (see response) |
 
 ## Unaddressed comments requiring author input
