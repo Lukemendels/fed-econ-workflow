@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A federal-economist adaptation of [pedrohcgs/claude-code-my-workflow](https://github.com/pedrohcgs/claude-code-my-workflow) (MIT). The upstream project is a full academic-research workflow for Claude Code — slides, papers, replication packages, and more. This repo takes **the knowledge layer of that workflow, adapted for federal regulatory economics, dual-built for Claude Code and enterprise chat.**
+A federal-economist adaptation of [pedrohcgs/claude-code-my-workflow](https://github.com/pedrohcgs/claude-code-my-workflow) (MIT). The upstream project is a full academic-research workflow for Claude Code — slides, papers, replication packages, and more. This repo takes **the knowledge layer of that workflow, adapted for federal regulatory and program/policy analysis, dual-built for Claude Code and enterprise chat.**
 
 > **Status:** this repo is being built in gated steps (scaffold → controlled-information rule → working rules/skills/templates → onboarding). Some files linked below land in a later step; each step's report says what's done.
 
@@ -28,7 +28,7 @@ node scripts/build-chat.mjs --check  # CI-style check: fails if chat/ is stale
 - **Public-domain regulatory content is in scope and encouraged** — OMB Circular A-4 concepts, standard VSL sourcing conventions, discount-rate guidance, RIA structure. None of that is agency-specific; it's the shared public methodology every federal economist already works from.
 - **Less is more.** Files stay short and single-purpose, following upstream's own advice.
 
-## Quick start (the "Jay test": fork to first useful output in under 30 minutes)
+## Quick start (the 30-minute test: fork to first useful output)
 
 1. **Fork and clone.**
    ```bash

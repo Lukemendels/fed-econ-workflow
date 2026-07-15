@@ -73,6 +73,23 @@ function deriveFallbackRole(body) {
   return heading[1].replace(/[`*_]/g, "").trim();
 }
 
+function escapeRegExp(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+// Chat mode has no Claude Code, so a `/skill-name` slash-command mention is a
+// tool reference that can't be followed — content authors should write the
+// skill name in prose instead. Checked only against known source slugs, not
+// a general slash pattern, so a literal "1/2" or a URL path never false-fires.
+function findSlashCommandReferences(content, slugs) {
+  const hits = [];
+  for (const slug of slugs) {
+    const pattern = new RegExp(`(?<![\\w/-])/${escapeRegExp(slug)}(?![\\w-])`);
+    if (pattern.test(content)) hits.push(slug);
+  }
+  return hits;
+}
+
 function buildOne({ path }) {
   const raw = readFileSync(path, "utf8");
   const { frontmatter, body } = parseFrontmatter(raw);
@@ -109,10 +126,19 @@ function main() {
     }
     const orphans = existingMd.filter((f) => !expected.has(f));
 
-    if (stale.length || orphans.length) {
+    const knownSlugs = sources.map((s) => s.slug);
+    const slashViolations = [];
+    for (const [name, content] of expected) {
+      for (const slug of findSlashCommandReferences(content, knownSlugs)) {
+        slashViolations.push(`chat/${name}: slash-command reference in chat output ("/${slug}")`);
+      }
+    }
+
+    if (stale.length || orphans.length || slashViolations.length) {
       console.error("chat/ is stale relative to .claude/ sources:");
       for (const f of stale) console.error(`  needs rebuild: chat/${f}`);
       for (const f of orphans) console.error(`  orphaned (no matching source): chat/${f}`);
+      for (const v of slashViolations) console.error(`  ${v}`);
       process.exit(1);
     }
     console.log(`chat/ is up to date (${expected.size} file(s)).`);
